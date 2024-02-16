@@ -1,16 +1,17 @@
 
 import { useState } from 'react'
+import Accordion from './ui/accordion';
 
 const Team = ({ tabs }: { tabs: Mountain[] }) => {
   const [currentTab, setCurrentTab] = useState(0)
 
   return (
     <div id="team">
-      <div className="container mx-auto py-10 flex items-center  lg:flex-row flex-col">
+      <div className="hidden lg:block container mx-auto py-10 flex items-center  lg:flex-row flex-col">
         <img src="./climb.png" />
         <p className='ml-4 mt-2 lg:mt-0'>Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim tortor nec congue.</p>
       </div>
-      <div className='bg-secondary'>
+      <div className='bg-secondary hidden lg:block'>
         <div className="container mx-auto">
           {
             tabs.map((tab, index) =>
@@ -22,7 +23,7 @@ const Team = ({ tabs }: { tabs: Mountain[] }) => {
         </div>
       </div>
 
-      <div className={`relative min-h-[600px] bg-cover`} style={{ backgroundImage: `url(${tabs[currentTab].image})` }}>
+      <div className={`hidden lg:block relative min-h-[600px] bg-cover`} style={{ backgroundImage: `url(${tabs[currentTab].image})` }}>
         <div className="container mx-auto py-10">
           <div className="lg:w-1/2 bg-white-opaque p-4 pr-12 mt-10">
             <h2 className='font-oswald text-2xl font-bold text-secondary'>SCHEDULE</h2>
@@ -30,6 +31,8 @@ const Team = ({ tabs }: { tabs: Mountain[] }) => {
           </div>
         </div>
       </div>
+
+      <Accordion items={tabs}/>
 
     </div>
   );

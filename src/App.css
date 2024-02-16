@@ -3,3 +3,9 @@
     max-width: 800px !important;
   }
 }
+
+
+.transition-grid-template-rows{
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.15s ease-out;
+}
