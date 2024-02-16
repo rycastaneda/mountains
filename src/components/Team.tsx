@@ -23,7 +23,7 @@ const Team = ({ tabs }: { tabs: Mountain[] }) => {
         </div>
       </div>
 
-      <div className={`hidden lg:block relative min-h-[600px] bg-cover`} style={{ backgroundImage: `url(${tabs[currentTab].image})` }}>
+      <div className={`hidden lg:block relative min-h-[800px] bg-cover`} style={{ backgroundImage: `url(${tabs[currentTab].image})` }}>
         <div className="container mx-auto py-10">
           <div className="lg:w-1/2 bg-white-opaque p-4 pr-12 mt-10">
             <h2 className='font-oswald text-2xl font-bold text-secondary'>SCHEDULE</h2>

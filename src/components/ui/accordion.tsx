@@ -20,7 +20,7 @@ function Accordion({ items }: { items: Mountain[] }) {
             {accordion.name}
             <img src={accordion.open ? "/up.svg" : "/down.svg"} />
           </a>
-          <div className={"mb-2 bg-secondary text-primary leading-3 grid transition-grid-template-rows " + (accordion.open ? 'grid-rows-1' : '')}>
+          <div className={"bg-secondary text-primary leading-3 grid transition-grid-template-rows " + (accordion.open ? 'grid-rows-1' : '')}>
             <div  className={`${accordion.open ? 'min-h-[600px]' : ''} bg-cover overflow-hidden`} style={{ backgroundImage: `url(${accordion.image})` }}>
               <div className="bg-white-opaque px-4">
                 <h2 className='font-oswald text-2xl font-bold text-secondary'>SCHEDULE</h2>

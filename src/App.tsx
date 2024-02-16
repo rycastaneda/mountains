@@ -54,8 +54,11 @@ const tabs: Mountain[] = [{
 function App() {
   return (
     <div>
-      <div className="relative min-h-[825px] bg-[url('/page1.jpg')]">
+      <div className="relative min-h-[825px] lg:bg-[url('/page1.jpg')] bg-[url('/nologo.jpg')] flex flex-col">
         <Nav />
+        <div className='flex lg:hidden place-items-center text-center h-full flex-grow mx-auto'>
+          <img src="./logo-text.png"/>
+        </div>
       </div>
       <History/>
       <Team tabs={tabs}/>
