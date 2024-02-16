@@ -1,9 +1,7 @@
-import { useState } from 'react'
 import './App.css'
 import Nav from './components/nav'
 import History from './components/History'
 import Team from './components/Team'
-import { TabletSmartphone } from 'lucide-react'
 import Footer from './components/footer'
 
 
